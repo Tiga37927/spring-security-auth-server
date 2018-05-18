@@ -1,0 +1,25 @@
+server:
+  port: 8081
+  context-path: /auth
+security:
+  basic:
+    enabled: false
+
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3306/test
+    username: root
+    password: root
+    driver-class-name: org.mariadb.jdbc.Driver
+    tomcat:
+      test-while-idle: true
+      validation-query: SELECT 1
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
