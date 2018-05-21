@@ -35,7 +35,6 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 .autoApprove(true);
     }
 
-
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
 

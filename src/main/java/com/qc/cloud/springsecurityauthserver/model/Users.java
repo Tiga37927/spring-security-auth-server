@@ -33,6 +33,9 @@ public class Users {
     @Column(name = "age")
     private int age;
 
+    @Column(name = "salt")
+    private String salt;
+
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "user_role", joinColumns =
     @JoinColumn(name = "user_id"), inverseJoinColumns =
@@ -114,6 +117,14 @@ public class Users {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
     }
 
     public Set<Role> getRoles() {
