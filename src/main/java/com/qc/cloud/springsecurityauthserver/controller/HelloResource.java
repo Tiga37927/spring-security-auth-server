@@ -15,7 +15,7 @@ public class HelloResource {
         return principal;
     }
 
-    @GetMapping
+    @GetMapping("/xxx")
     public String hello() {
         return "hello world";
     }
